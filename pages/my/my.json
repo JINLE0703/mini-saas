@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "guest": "/components/guest"
+    "guest": "/components/guest-card"
   }
 }

@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="card">
+    <swiper previous-margin="143rpx" current="{{currentIndex}}">
+      <block wx:for="{{list}}" wx:key="index">
+        <swiper-item>
+          <image class="card-img" src="/public/images/guest.png"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
