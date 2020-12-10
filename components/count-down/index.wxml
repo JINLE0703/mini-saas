@@ -1,0 +1,11 @@
+<view class="container">
+  倒计时
+  <view class="time">{{d}}</view>
+  天
+  <view class="time">{{h}}</view>
+  时
+  <view class="time">{{m}}</view>
+  分
+  <view class="time">{{s}}</view>
+  秒
+</view>

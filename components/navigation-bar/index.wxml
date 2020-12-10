@@ -1,0 +1,4 @@
+<view style="height: {{statusBarHeight}}px"></view>
+<view class="navi-bar" style="height: {{navigationBarHeight}}px">
+  <slot></slot>
+</view>

@@ -1,0 +1,27 @@
+.container {
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  height: 80rpx;
+  border-top: 1px solid #EAEBEC;
+}
+
+.more {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #0049FF;
+  line-height: 40rpx;
+}
+
+.hide {
+  display: none;
+}

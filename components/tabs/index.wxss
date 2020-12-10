@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1px solid #EAEBEC;
+}
+
+.header-item {
+  width: 250rpx;
+  height: 90rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #262626;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+.current {
+  position: relative;
+  font-weight: 600;
+  color: #195AFF;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68rpx;
+  height: 6rpx;
+  background: #195AFF;
+  border-radius: 0rpx 4rpx 0rpx 4rpx;
+}

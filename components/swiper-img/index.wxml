@@ -1,0 +1,17 @@
+<view class="container">
+  <swiper bind:change="handleItemChange" circular autoplay>
+    <block wx:for="{{list}}" wx:key="id">
+      <swiper-item class="swiper-item-container">
+        <view class="item-container item-container-class">
+          <image class="img" src="{{item.image}}"></image>
+          <view class="content">{{item.content}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{list}}" wx:key="id">
+      <view class="dot {{index === currentDot ? 'current' : ''}}"></view>
+    </block>
+  </view>
+</view>

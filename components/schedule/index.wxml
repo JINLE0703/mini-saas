@@ -1,0 +1,9 @@
+<view class="container">
+  <block wx:for="{{scheduleList}}" wx:key="id">
+    <schedule-card item="{{item}}"></schedule-card>
+  </block>
+</view>
+<view class="footer ">
+  <view class="more {{showMore ? 'hide' : ''}}" bind:tap="handleTapShowMore">展开 ∨</view>
+  <view class="more {{showMore ? '' : 'hide'}}" bind:tap="handleTapHideMore">收起 ∧</view>
+</view>

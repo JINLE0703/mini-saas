@@ -1,13 +1,43 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "entryPagePath": "pages/home/home",
+  "pages": [
+    "pages/home/home",
+    "pages/news/news",
+    "pages/guide/guide",
+    "pages/my/my"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/public/images/tabbar/icon_tabbar_home_normal.png",
+        "selectedIconPath": "/public/images/tabbar/icon_tabbar_home_selected.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "/public/images/tabbar/navigation_guide_normal.png",
+        "selectedIconPath": "/public/images/tabbar/navigation_guide_sel.png"
+      },
+      {
+        "pagePath": "pages/guide/guide",
+        "text": "指南",
+        "iconPath": "/public/images/tabbar/icon_tabbar_news_normal.png",
+        "selectedIconPath": "/public/images/tabbar/icon_tabbar_news_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/public/images/tabbar/icon_tabbar_me_normal.png",
+        "selectedIconPath": "/public/images/tabbar/icon_tabbar_me_selected.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#fff",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

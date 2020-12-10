@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #959595;
+  line-height: 28rpx;
+}
+
+.time {
+  width: 51rpx;
+  height: 51rpx;
+  padding: 3rpx;
+  margin: 0 3rpx;
+  font-size: 40rpx;
+  line-height: 51rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #262626;
+}

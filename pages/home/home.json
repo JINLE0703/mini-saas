@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar",
+    "count-down": "/components/count-down",
+    "swiper-img": "/components/swiper-img",
+    "tabs": "/components/tabs",
+    "schedule": "/components/schedule",
+    "guest": "/components/guest"
+  },
+  "navigationStyle": "custom"
+}

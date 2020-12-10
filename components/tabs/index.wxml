@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">
+    <block wx:for="{{list}}" wx:key="id">
+      <view class="header-item {{currentIndex === index ? 'current' : ''}}" data-index="{{index}}"
+        bind:tap="handleTapHeader">{{item.title}}</view>
+    </block>
+  </view>
+
+  <swiper current="{{currentIndex}}" bind:change="handleSwiperChange" style="height: {{swiperHight}}">
+    <block wx:for="{{list}}" wx:key="id">
+      <swiper-item>
+        <view id="start{{index}}"></view>
+        <slot name="{{item.name}}"></slot>
+        <view id="end{{index}}"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

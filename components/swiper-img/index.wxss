@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  padding-bottom: 46rpx;
+}
+
+.swiper-item-container {
+  display: flex;
+  justify-content: center;
+}
+
+.item-container {
+  height: 100%;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.content {
+  position: absolute;
+  left: 24rpx;
+  bottom: 16rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 48rpx;
+}
+
+.dots {
+  position: absolute;
+  bottom: 24rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  margin-top: 16rpx;
+}
+
+.dot {
+  width: 24rpx;
+  height: 6rpx;
+  margin-right: 8rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0px 4px 0px 4px;
+}
+
+.current {
+  background-color: #195AFF;
+}

@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="side">
+    <image class="icon-green" src="/public/images/Group 3.png" />
+    <view class="line"></view>
+  </view>
+  <view class="content">
+    <view class="time-info">
+      <view class="date">{{item.date}}</view>
+      <view class="time">{{item.time}}</view>
+    </view>
+    <view class="card">
+      <image class="card-bg" src="/public/images/card_bg.png" />
+      <view class="card-row">
+        <view class="site">{{item.site}}</view>
+        <view class="reserve-info">
+          <view class="dot"></view>
+          <view class="reserve">{{item.couldReserve ? '' : '不'}}可预约</view>
+        </view>
+      </view>
+      <view class="title">{{item.title}}</view>
+      <view class="guest-info">
+        <image class="guest-avatar" src="{{item.guest.avatar}}" />
+        <view>
+          <view class="guest-name">{{item.guest.name}}</view>
+          <view class="guest-status">{{item.guest.status}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
