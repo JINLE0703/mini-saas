@@ -1,4 +1,7 @@
-<view style="height: {{statusBarHeight}}px"></view>
-<view class="navi-bar" style="height: {{navigationBarHeight}}px">
-  <slot></slot>
+<view class="container" style="height: {{statusBarHeight + navigationBarHeight}}px">
+  <view style="height: {{statusBarHeight}}px"></view>
+  <view class="navi-bar" style="height: {{navigationBarHeight}}px">
+    <slot></slot>
+  </view>
 </view>
+<view style="height: {{statusBarHeight + navigationBarHeight}}px"></view>
