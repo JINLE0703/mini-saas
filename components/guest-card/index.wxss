@@ -1,5 +1,0 @@
-.card-img {
-  width: 404rpx;
-  height: 404rpx;
-  border: 1px solid blue;
-}

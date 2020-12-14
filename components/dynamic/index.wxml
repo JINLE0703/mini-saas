@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">
+    <image mode="aspectFill" class="header-bg" src="/public/images/webp.jpg" />
+    <view class="title">2020数字峰会共话“媒体与科技” CGTN智库成立</view>
+    <view class="line"></view>
+    <view class="time">2020-08-23 08:00</view>
+  </view>
+  <view class="card-container">
+    <block wx:for="{{[1,2]}}" wx:key="index">
+      <view class="card-item">
+        <view class="item-info">
+          <view class="item-title">恒丰泰董事长叶胜康参加2020数字峰会</view>
+          <view class="item-time">2018-8-23 24:88</view>
+        </view>
+        <image mode="aspectFill" class="item-poster" src="/public/images/dynamic_1.jpg" />
+        <view class="item-border" wx:if="{{index !== 1}}"></view>
+      </view>
+    </block>
+  </view>
+</view>

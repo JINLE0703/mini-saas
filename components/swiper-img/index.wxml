@@ -1,9 +1,9 @@
 <view class="container">
-  <swiper bind:change="handleItemChange" circular autoplay>
+  <swiper bind:change="handleItemChange" circular autoplay easing-function="linear" style="height: 388rpx">
     <block wx:for="{{list}}" wx:key="id">
       <swiper-item class="swiper-item-container">
-        <view class="item-container item-container-class">
-          <image class="img" src="{{item.image}}"></image>
+        <view class="item-container">
+          <image mode="aspectFill" class="img" src="{{item.image}}"></image>
           <view class="content">{{item.content}}</view>
         </view>
       </swiper-item>

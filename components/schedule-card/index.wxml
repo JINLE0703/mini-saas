@@ -1,6 +1,6 @@
 <view class="container">
   <view class="side">
-    <image class="icon-green" src="/public/images/Group 3.png" />
+    <image class="icon-green" src="/public/images/icon_green.png" />
     <view class="line"></view>
   </view>
   <view class="content">

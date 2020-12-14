@@ -1,5 +1,5 @@
 <navigation-bar>
-  <image class="navi-bar-img" src="/public/images/icon_tabbar_logo.png" />
+  <image class="navi-bar-img" mode="aspectFill" src="/public/images/icon_tabbar_logo.png" />
 </navigation-bar>
 <view class="container">
   <image class="bg-top" src="/public/images/bg_home_top.png" />
@@ -13,12 +13,12 @@
     <count-down endTime="{{'2020/12/25'}}" />
   </view>
 
-  <swiper-img item-container-class="swiper-item-container" list="{{imgInfo}}" />
+  <swiper-img list="{{imgInfo}}" />
   
   <tabs id="tabs" list="{{tabsInfo}}">
     <schedule slot="{{tabsInfo[0].name}}" list="{{scheduleInfo}}" bind:getMore="getMoreScheduleInfo" bind:hideMore="hideMore" />
     <view slot="{{tabsInfo[1].name}}">重磅嘉宾</view>
-    <view slot="{{tabsInfo[2].name}}">大会动态</view>
+    <dynamic slot="{{tabsInfo[2].name}}" />
   </tabs>
 
   <view class="ad">

@@ -1,0 +1,16 @@
+<view class="container">
+  <swiper class="swiper" bind:change="handleSwiperChange" current="{{currentIndex}}" circular previous-margin="143rpx" next-margin="143rpx">
+    <block wx:for="{{list}}" wx:key="item">
+      <swiper-item class="swiper-item {{currentIndex === index ? 'active' : 'quiet'}}">
+        <view class="item-container {{currentIndex === index ? 'active' : 'quiet'}}" style="margin-left: {{item.offset}}rpx">
+          <image class="guest-img" src="{{item.cover_img}}" />
+          <view class="guest-info">
+            <image class="guest-bg" src="/public/images/bg_people_bottom.png" />
+            <view class="guest-name">{{item.name}}</view>
+            <view class="guest-status" wx:for="{{item.post}}" wx:key="item">{{item}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

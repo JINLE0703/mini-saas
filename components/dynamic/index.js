@@ -1,20 +1,17 @@
-// components/guest/index.js
+// components/state/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    list: {
-      type: Array,
-      value: [1, 2, 3]
-    }
+    
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    currentIndex: 0
+
   },
 
   /**

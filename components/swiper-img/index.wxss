@@ -9,6 +9,7 @@
 }
 
 .item-container {
+  width: 690rpx;
   height: 100%;
   position: relative;
 }

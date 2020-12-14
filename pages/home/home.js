@@ -9,17 +9,17 @@ Page({
     imgInfo: [
       {
         id: 0,
-        image: '/public/images/jumpfly.png',
+        image: '/public/images/jump_fly.png',
         content: '如何在不确定的时代找到正确的方向'
       },
       {
         id: 1,
-        image: '/public/images/jumpfly.png',
+        image: '/public/images/jump_fly.png',
         content: '如何在不确定的时代找到正确的方向'
       },
       {
         id: 2,
-        image: '/public/images/jumpfly.png',
+        image: '/public/images/jump_fly.png',
         content: '如何在不确定的时代找到正确的方向'
       }
     ],
@@ -38,7 +38,7 @@ Page({
       {
         id: 2,
         title: '大会动态',
-        name: 'state'
+        name: 'dynamic'
       }
     ],
     // 日程数据

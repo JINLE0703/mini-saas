@@ -1,3 +1,7 @@
+/**
+ * 格式化时间
+ * @param {String} date 时间 2020/11/11
+ */
 const formatTime = date => {
   // const year = date.getFullYear()
   // const month = date.getMonth() + 1
@@ -14,6 +18,10 @@ const formatTime = date => {
   // return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
+/**
+ * 补0
+ * @param {String} n 数字
+ */
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n

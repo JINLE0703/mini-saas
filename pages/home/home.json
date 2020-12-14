@@ -5,7 +5,8 @@
     "swiper-img": "/components/swiper-img",
     "tabs": "/components/tabs",
     "schedule": "/components/schedule",
-    "guest": "/components/guest-card"
+    "guest": "/components/swiper-guest",
+    "dynamic": "/components/dynamic"
   },
   "navigationStyle": "custom"
 }
