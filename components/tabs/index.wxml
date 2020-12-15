@@ -6,7 +6,7 @@
     </block>
   </view>
 
-  <swiper current="{{currentIndex}}" bind:change="handleSwiperChange" style="height: {{swiperHight}}">
+  <swiper class="swiper" current="{{currentIndex}}" bind:change="handleSwiperChange" easing-function="easeInOutCubic" style="height: {{swiperHight}}">
     <block wx:for="{{list}}" wx:key="id">
       <swiper-item>
         <view id="start{{index}}"></view>

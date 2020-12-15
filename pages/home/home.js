@@ -67,37 +67,6 @@ Page({
           name: '刘克鸿',
           status: '腾讯云会展总裁',
           avatar: '/public/images/Oval.png'
-        }
-      }
-    ]
-  },
-
-  getMoreScheduleInfo() {
-    const scheduleInfo = [
-      {
-        id: 0,
-        title: '2020年数字峰会官方会议报道',
-        site: '数字峰会主会场',
-        date: '12月24日',
-        time: '08:00 - 09:30',
-        couldReserve: true,
-        guest: {
-          name: '刘克鸿',
-          status: '腾讯云会展总裁',
-          avatar: '/public/images/Oval.png'
-        }
-      },
-      {
-        id: 1,
-        title: '2020年数字峰会官方会议报道',
-        site: '数字峰会主会场',
-        date: '12月24日',
-        time: '08:00 - 09:30',
-        couldReserve: true,
-        guest: {
-          name: '刘克鸿',
-          status: '腾讯云会展总裁',
-          avatar: '/public/images/Oval.png'
         },
       },
       {
@@ -127,16 +96,18 @@ Page({
         },
       }
     ]
-
-    this.setData({
-      scheduleInfo
-    }, () => {
-      this.selectComponent('#tabs').autoHeight()
-    })
   },
 
-  hideMore() {
+  // 标签栏自动高度
+  tabsAutoHeight() {
     this.selectComponent('#tabs').autoHeight()
+  },
+
+  handleTapShare() {
+    wx.showToast({
+      title: '感谢分享',
+      mask: true
+    })
   },
 
   /**

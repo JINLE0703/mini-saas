@@ -5,7 +5,60 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    scheduleInfo: [
+      {
+        id: 0,
+        title: '2020年数字峰会官方会议报道',
+        site: '数字峰会主会场',
+        date: '12月24日',
+        time: '08:00 - 09:30',
+        couldReserve: true,
+        guest: {
+          name: '刘克鸿',
+          status: '腾讯云会展总裁',
+          avatar: '/public/images/Oval.png'
+        }
+      },
+      {
+        id: 1,
+        title: '2020年数字峰会官方会议报道',
+        site: '数字峰会主会场',
+        date: '12月24日',
+        time: '08:00 - 09:30',
+        couldReserve: true,
+        guest: {
+          name: '刘克鸿',
+          status: '腾讯云会展总裁',
+          avatar: '/public/images/Oval.png'
+        },
+      },
+      {
+        id: 2,
+        title: '2020年数字峰会官方会议报道',
+        site: '数字峰会主会场',
+        date: '12月24日',
+        time: '08:00 - 09:30',
+        couldReserve: true,
+        guest: {
+          name: '刘克鸿',
+          status: '腾讯云会展总裁',
+          avatar: '/public/images/Oval.png'
+        },
+      },
+      {
+        id: 3,
+        title: '2020年数字峰会官方会议报道',
+        site: '数字峰会主会场',
+        date: '12月24日',
+        time: '08:00 - 09:30',
+        couldReserve: true,
+        guest: {
+          name: '刘克鸿',
+          status: '腾讯云会展总裁',
+          avatar: '/public/images/Oval.png'
+        },
+      }
+    ]
   },
 
   /**

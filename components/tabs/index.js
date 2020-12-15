@@ -65,6 +65,6 @@ Component({
             swiperHight: _space
           })
         })
-    }
+    },
   }
 })

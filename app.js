@@ -10,7 +10,7 @@ App({
     wx.loadFontFace({
       global: true,
       family: 'iconfont',
-      source: 'https://at.alicdn.com/t/font_2270683_7idkshohwif.woff2',
+      source: 'https://at.alicdn.com/t/font_2270683_wwbl563nu39.woff2',
     })
   },
   onShow (options) {

@@ -28,20 +28,13 @@ Component({
           post: ["腾讯云会展产品副总裁"],
           postEn: ["Vice President of Tencent Cloud Exhibition Products"],
         },
-        // {
-        //   cover_img: 'https://yhz-standard-1302848509.cos.ap-guangzhou.myqcloud.com/home/taifang.jpeg',
-        //   name: "方泰",
-        //   nameEn: "Taifang",
-        //   post: ["腾讯云会展运营副总裁"],
-        //   postEn: ["Vice President of Operations, Tencent Cloud Exhibition"],
-        // },
-        // {
-        //   cover_img: 'https://yhz-standard-1302848509.cos.ap-guangzhou.myqcloud.com/home/yanmin.jpg',
-        //   name: "严敏",
-        //   nameEn: "Vivianayan",
-        //   post: ["腾讯云会展方案总监"],
-        //   postEn: ["Director of Tencent Cloud Exhibition Solutions"],
-        // }
+        {
+          cover_img: 'https://yhz-standard-1302848509.cos.ap-guangzhou.myqcloud.com/home/taifang.jpeg',
+          name: "方泰",
+          nameEn: "Taifang",
+          post: ["腾讯云会展运营副总裁"],
+          postEn: ["Vice President of Operations, Tencent Cloud Exhibition"],
+        }
       ]
     }
   },
@@ -71,6 +64,38 @@ Component({
         this.setSwiperOffset(this.data.currentIndex)
       })
     },
+    // 点击左箭头
+    handleTapLeft() {
+      let { currentIndex } = this.data
+      if(currentIndex === 0) {
+        currentIndex = this.properties.list.length - 1
+      } else {
+        currentIndex--
+      }
+      this.setData({
+        currentIndex
+      })
+    },
+    // 点击右箭头
+    handleTapRight() {
+      let { currentIndex } = this.data
+      if(currentIndex === this.properties.list.length - 1) {
+        currentIndex = 0
+      } else {
+        currentIndex++
+      }
+      this.setData({
+        currentIndex
+      })
+    },
+    // 处理点击指示头像
+    handleTapDot(e) {
+      const currentIndex = e.currentTarget.dataset.index
+      this.setData({
+        currentIndex
+      })
+    },
+    // 设置滑动窗口偏移
     setSwiperOffset(current) {
       const listLength = this.properties.list.length
       const leftSwiper = current > 0 ? current - 1 : listLength - 1

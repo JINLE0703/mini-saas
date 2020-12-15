@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "guest": "/components/dynamic"
+    "demo": "/components/swiper-guest"
   }
 }

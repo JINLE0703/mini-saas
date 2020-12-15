@@ -1,9 +1,9 @@
 <view class="container">
   <swiper class="swiper" bind:change="handleSwiperChange" current="{{currentIndex}}" circular previous-margin="143rpx" next-margin="143rpx">
-    <block wx:for="{{list}}" wx:key="item">
-      <swiper-item class="swiper-item {{currentIndex === index ? 'active' : 'quiet'}}">
-        <view class="item-container {{currentIndex === index ? 'active' : 'quiet'}}" style="margin-left: {{item.offset}}rpx">
-          <image class="guest-img" src="{{item.cover_img}}" />
+    <block wx:for="{{list}}" wx:key="index">
+      <swiper-item class="swiper-item {{currentIndex === index ? 'active' : ''}}">
+        <view class="item-container {{currentIndex === index ? '' : 'quiet'}}">
+          <image mode="aspectFill" class="guest-img" src="{{item.cover_img}}" />
           <view class="guest-info">
             <image class="guest-bg" src="/public/images/bg_people_bottom.png" />
             <view class="guest-name">{{item.name}}</view>
@@ -13,4 +13,22 @@
       </swiper-item>
     </block>
   </swiper>
+  <icon class="arrow-left" bind:tap="handleTapLeft">
+    <image class="arrow-img" src="/public/images/icon_home_people_arrow_left.png" />
+  </icon>
+  <icon class="arrow-right" bind:tap="handleTapRight">
+    <image class="arrow-img" src="/public/images/icon_home_people_arrow_right.png" />
+  </icon>
+  <view class="footer">
+    <view class="dots">
+      <block wx:for="{{list}}" wx:key="index">
+        <view class="dot-item {{currentIndex === index ? 'dot-active' : ''}}" data-index="{{index}}" bind:tap="handleTapDot">
+          <image mode="aspectFill" src="{{item.cover_img}}" />
+        </view>
+      </block>
+    </view>
+    <view class="more">
+      更多 <icon class="iconfont arrow-more"></icon>
+    </view>
+  </view>
 </view>

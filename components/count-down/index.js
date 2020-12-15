@@ -29,6 +29,9 @@ Component({
     },
     detached() {
       clearInterval(this.data._timer)
+      this.setData({
+        _timer: null
+      })
     }
   },
 

@@ -16,8 +16,8 @@
   <swiper-img list="{{imgInfo}}" />
   
   <tabs id="tabs" list="{{tabsInfo}}">
-    <schedule slot="{{tabsInfo[0].name}}" list="{{scheduleInfo}}" bind:getMore="getMoreScheduleInfo" bind:hideMore="hideMore" />
-    <view slot="{{tabsInfo[1].name}}">重磅嘉宾</view>
+    <schedule slot="{{tabsInfo[0].name}}" list="{{scheduleInfo}}" defaultCount="2" bind:tabsAutoHeight="tabsAutoHeight" />
+    <guest slot="{{tabsInfo[1].name}}" />
     <dynamic slot="{{tabsInfo[2].name}}" />
   </tabs>
 
@@ -33,7 +33,7 @@
     <image class="partner-content" src="/public/images/pic_home_partner.png" />
   </view>
 
-  <view class="share">
+  <view class="share" bind:tap="handleTapShare">
     分享 
   </view>
 </view>

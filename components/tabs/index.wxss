@@ -34,3 +34,7 @@
   background: #195AFF;
   border-radius: 0rpx 4rpx 0rpx 4rpx;
 }
+
+.swiper {
+  transition: height .5s linear;
+}
