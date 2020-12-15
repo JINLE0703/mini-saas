@@ -4,6 +4,6 @@
   </block>
 </view>
 <view class="footer ">
-  <view class="more {{showMore ? 'hide' : ''}}" bind:tap="handleTapShowMore">展开 ∨</view>
-  <view class="more {{showMore ? '' : 'hide'}}" bind:tap="handleTapHideMore">收起 ∧</view>
+  <view class="more {{showMore ? 'hide' : ''}}" bind:tap="handleTapShowMore">展开 <icon class="iconfont arrow-down" /></view>
+  <view class="more {{showMore ? '' : 'hide'}}" bind:tap="handleTapHideMore">收起 <icon class="iconfont arrow-up" /></view>
 </view>

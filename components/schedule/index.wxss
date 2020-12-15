@@ -25,3 +25,16 @@
 .hide {
   display: none;
 }
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 28rpx;
+}
+
+.arrow-down::before {
+  content: '\e686';
+}
+
+.arrow-up::before {
+  content: '\e685' ;
+}
