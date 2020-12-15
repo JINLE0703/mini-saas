@@ -5,7 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 标签栏数据
+    tabsInfo: [
+      {
+        id: 0,
+        title: '全部',
+      },
+      {
+        id: 1,
+        title: '行业趋势',
+      },
+      {
+        id: 2,
+        title: '案例分析',
+      },
+      {
+        id: 3,
+        title: '行家观点',
+      }
+    ],
+    // 滚动图片数据
+    imgInfo: [
+      {
+        id: 0,
+        image: '/public/images/jump_fly.png',
+        content: '如何在不确定的时代找到正确的方向'
+      },
+      {
+        id: 1,
+        image: '/public/images/jump_fly.png',
+        content: '如何在不确定的时代找到正确的方向'
+      },
+      {
+        id: 2,
+        image: '/public/images/jump_fly.png',
+        content: '如何在不确定的时代找到正确的方向'
+      }
+    ],
   },
 
   /**

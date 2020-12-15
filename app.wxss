@@ -5,3 +5,8 @@
 .iconfont {
   font-family: 'iconfont' !important;
 }
+
+.navi-bar-img {
+  width: 247rpx;
+  height: 48rpx;
+}

@@ -1,16 +1,20 @@
 <view class="container">
-  <view class="header">
-    <block wx:for="{{list}}" wx:key="id">
-      <view class="header-item {{currentIndex === index ? 'current' : ''}}" data-index="{{index}}"
-        bind:tap="handleTapHeader">{{item.title}}</view>
-    </block>
-  </view>
+  <scroll-view class="scroll-view" scroll-x>
+    <view class="header">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="header-item {{currentIndex === index ? 'current' : ''}}" data-index="{{index}}"
+          bind:tap="handleTapHeader">{{item.title}}</view>
+      </block>
+    </view>
+  </scroll-view>
 
-  <swiper class="swiper" current="{{currentIndex}}" bind:change="handleSwiperChange" easing-function="easeInOutCubic" style="height: {{swiperHight}}">
+
+  <swiper class="swiper" current="{{currentIndex}}" bind:change="handleSwiperChange" easing-function="easeInOutCubic"
+    style="height: {{swiperHight}}">
     <block wx:for="{{list}}" wx:key="id">
       <swiper-item>
         <view id="start{{index}}"></view>
-        <slot name="{{item.name}}"></slot>
+        <slot name="{{item.id}}"></slot>
         <view id="end{{index}}"></view>
       </swiper-item>
     </block>

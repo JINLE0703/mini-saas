@@ -1,3 +1,11 @@
-<view>
-  news
-</view>
+<navigation-bar>
+  <image class="navi-bar-img" mode="aspectFill" src="/public/images/icon_tabbar_logo.png" />
+</navigation-bar>
+<tabs list="{{tabsInfo}}">
+  <block wx:for="{{tabsInfo}}" wx:key="id">
+    <view slot="{{item.id}}" class="conten-container">
+      <swiper-img wx:if="{{index === 0}}" list="{{imgInfo}}" />
+      
+    </view>
+  </block>
+</tabs>

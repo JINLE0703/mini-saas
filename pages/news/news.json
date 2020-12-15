@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar",
+    "tabs": "/components/tabs",
+    "swiper-img": "/components/swiper-img"
+  },
+  "navigationStyle": "custom"
 }

@@ -16,9 +16,9 @@
   <swiper-img list="{{imgInfo}}" />
   
   <tabs id="tabs" list="{{tabsInfo}}">
-    <schedule slot="{{tabsInfo[0].name}}" list="{{scheduleInfo}}" defaultCount="2" bind:tabsAutoHeight="tabsAutoHeight" />
-    <guest slot="{{tabsInfo[1].name}}" />
-    <dynamic slot="{{tabsInfo[2].name}}" />
+    <schedule slot="{{tabsInfo[0].id}}" list="{{scheduleInfo}}" defaultCount="2" bind:tabsAutoHeight="tabsAutoHeight" />
+    <guest slot="{{tabsInfo[1].id}}" />
+    <dynamic slot="{{tabsInfo[2].id}}" />
   </tabs>
 
   <view class="ad">

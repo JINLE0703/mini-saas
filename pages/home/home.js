@@ -28,17 +28,14 @@ Page({
       {
         id: 0,
         title: '大会日程',
-        name: 'schedule'
       },
       {
         id: 1,
         title: '重磅嘉宾',
-        name: 'guest'
       },
       {
         id: 2,
         title: '大会动态',
-        name: 'dynamic'
       }
     ],
     // 日程数据
