@@ -3,8 +3,6 @@ Component({
   /**
    * 组件的属性列表
    */
-  externalClasses: ['item-container-class'],
-
   properties: {
     list: {
       type: Array,

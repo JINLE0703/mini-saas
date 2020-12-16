@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "swiper-img": "/components/swiper-img",
+    "news-card": "/components/news-card"
+  }
+}

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navBarHeight: 0,
+    navBarHeight: 'auto',
     // 滚动图片数据
     imgInfo: [
       {
@@ -92,8 +92,8 @@ Page({
           name: '刘克鸿',
           status: '腾讯云会展总裁',
           avatar: '/public/images/Oval.png'
-        },
-      }
+        }, 
+      },
     ]
   },
 

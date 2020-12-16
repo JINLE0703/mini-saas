@@ -2,13 +2,11 @@
   <image class="navi-bar-img" mode="aspectFill" src="/public/images/icon_tabbar_logo.png" />
 </navigation-bar>
 <scroll-view scroll-y style="height: calc(100vh - {{navBarHeight}}px)">
-  <tabs list="{{tabsInfo}}">
+  <tabs list="{{tabsInfo}}" tabsHeight="{{tabsHeight}}">
     <block wx:for="{{tabsInfo}}" wx:key="id">
       <view slot="{{item.id}}" class="conten-container">
-        <swiper-img wx:if="{{index === 0}}" list="{{imgInfo}}" />
-        <block wx:for="{{allInfo}}" wx:key="id">
-          <news-card item="{{item}}" />
-        </block>
+        <news-list list="{{allInfo}}" imgList="{{imgInfo}}" listId="{{item.id}}">
+        </news-list>
       </view>
     </block>
   </tabs>

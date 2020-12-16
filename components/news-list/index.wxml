@@ -1,0 +1,9 @@
+<swiper-img wx:if="{{listId === 0}}" list="{{imgList}}" />
+<block wx:for="{{list}}" wx:key="id">
+  <view class="card-container">
+    <news-card item="{{item}}" />
+  </view>
+</block>
+<view class="no-more">
+  没有更多了
+</view>

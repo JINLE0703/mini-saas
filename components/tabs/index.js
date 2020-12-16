@@ -7,9 +7,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    // 导航栏渲染列表
     list: {
       type: Array,
       value: []
+    },
+    // 整个tabs的高度（用于固定的导航栏，主体内容滚动）
+    tabsHeight: {
+      type: String,
+      value: null
     }
   },
 
@@ -17,8 +23,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    currentIndex: 0,
-    swiperHight: 'auto'
+    currentIndex: 0, // 当前轮播index
+    swiperHight: 'auto' // 主题内容高度
   },
 
   lifetimes: {

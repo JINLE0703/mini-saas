@@ -1,5 +1,5 @@
 <view class="container">
-  <scroll-view class="scroll-view" scroll-x>
+  <scroll-view class="scroll-x" scroll-x>
     <view class="header">
       <block wx:for="{{list}}" wx:key="id">
         <view class="header-item {{currentIndex === index ? 'current' : ''}}" data-index="{{index}}"
@@ -8,15 +8,16 @@
     </view>
   </scroll-view>
 
-
-  <swiper class="swiper" current="{{currentIndex}}" bind:change="handleSwiperChange" easing-function="easeInOutCubic"
-    style="height: {{swiperHight}}">
-    <block wx:for="{{list}}" wx:key="id">
-      <swiper-item>
-        <view id="start{{index}}"></view>
-        <slot name="{{item.id}}"></slot>
-        <view id="end{{index}}"></view>
-      </swiper-item>
-    </block>
-  </swiper>
+  <scroll-view class="scroll-y" scroll-y style="height: calc({{tabsHeight}} - 90rpx)">
+    <swiper class="swiper" current="{{currentIndex}}" bind:change="handleSwiperChange" easing-function="easeInOutCubic"
+      style="height: {{swiperHight}}">
+      <block wx:for="{{list}}" wx:key="id">
+        <swiper-item>
+          <view id="start{{index}}"></view>
+          <slot name="{{item.id}}"></slot>
+          <view id="end{{index}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </scroll-view>
 </view>

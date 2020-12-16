@@ -1,13 +1,5 @@
 .container {
   padding-bottom: 132rpx;
-}
-
-.navi-bar-img {
-  width: 247rpx;
-  height: 48rpx;
-}
-
-.container {
   position: relative;
 }
 

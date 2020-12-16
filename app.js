@@ -1,9 +1,9 @@
 // app.js
 App({
   globalData: {
-    statusHeight: 0,
-    navHeight: 0,
-    navBarHeight: 0
+    statusHeight: 'auto',
+    navHeight: 'auto',
+    navBarHeight: 'auto'
   },
 
   async initNavBar() {

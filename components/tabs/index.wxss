@@ -1,4 +1,4 @@
-.scroll-view {
+.scroll-x {
   width: 100%;
   white-space: nowrap;
 }

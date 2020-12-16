@@ -6,7 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navBarHeight: 0,
+    // 导航栏高度
+    navBarHeight: 'auto',
+    // tabs高度
+    tabsHeight: 'auto',
     // 标签栏数据
     tabsInfo: [
       {
@@ -68,26 +71,19 @@ Page({
         image: '/public/images/dynamic_1.jpg'
       },
       {
-        id: 0,
+        id: 3,
         title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
         tag: '大会动态',
         date: '2018-8-23',
         image: '/public/images/dynamic_1.jpg'
       },
       {
-        id: 1,
+        id: 4,
         title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
         tag: '大会动态',
         date: '2018-8-23',
         image: '/public/images/dynamic_1.jpg'
       },
-      {
-        id: 2,
-        title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
-        tag: '大会动态',
-        date: '2018-8-23',
-        image: '/public/images/dynamic_1.jpg'
-      }
     ]
   },
 
@@ -96,7 +92,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      navBarHeight: app.globalData.navBarHeight
+      navBarHeight: app.globalData.navBarHeight,
+      tabsHeight: `(100vh - ${app.globalData.navBarHeight}px)`
     })
   },
 
