@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-title {
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.title {
+  height: 56rpx;
+  font-size: 38rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #262626;
+  line-height: 56rpx;
+}

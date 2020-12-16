@@ -1,0 +1,4 @@
+<view class="container">
+  <image class="icon-title" src="/public/images/icon_home_title.png" />
+  <view class="title">{{title}}</view>
+</view>

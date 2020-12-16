@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="data">
+    <image class="img" mode="aspectFill"
+      src="{{imgUrl}}" />
+    <view class="info">
+      <view class="name">{{item.name}}</view>
+      <view class="size">{{item.size}}</view>
+    </view>
+  </view>
+  <view class="icons">
+    <!-- email -->
+    <image class="icons-img" mode="aspectFill"
+      src="https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/icon-email.png?sign=bb47804213abd32ba6fee224f901705b&t=1608113345" />
+    <!-- download -->
+    <image class="icons-img" mode="aspectFill"
+      src="https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/icon-download.png?sign=23adc1189cc63a23b6de6618e1830243&t=1608113333" />
+  </view>
+</view>

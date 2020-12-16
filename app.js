@@ -10,7 +10,7 @@ App({
     // 获取状态栏高度
     const { statusBarHeight } = await wx.getSystemInfo()
     // 获取胶囊信息
-    const { top, height } = wx.getMenuButtonBoundingClientRect()
+    const { top, height } = await wx.getMenuButtonBoundingClientRect()
     const navHeight = (top - statusBarHeight) * 2 + height
     // 获取导航栏高度
     this.globalData.statusHeight = statusBarHeight

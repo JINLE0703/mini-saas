@@ -1,3 +1,49 @@
-<view>
-  guide
-</view>
+<navigation-bar>
+  <image class="navi-bar-img" mode="aspectFill" src="/public/images/icon_tabbar_logo.png" />
+</navigation-bar>
+<scroll-view scroll-y style="height: calc(100vh - {{navBarHeight}}px)">
+  <view class="container">
+
+    <view class="mini-container">
+      <common-title title="会议详情" />
+      <view class="detail-card"
+        style="background-image: url('https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/pic-guide-dhjs.png?sign=b942a120b5e0ddb862d8a54438828a54&t=1608109474')">
+        <view class="detail-card-title">大会介绍</view>
+        <view class="detail-card-info">概况、组织架构、历届大会、合作伙伴</view>
+      </view>
+      <view class="detail-card"
+        style="background-image: url('https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/pic-guide-chxz.png?sign=a57b1d4196ea16ed18bdac2d69ccc73a&t=1608110345')">
+        <view class="detail-card-title">参会须知</view>
+        <view class="detail-card-info">会议注意事项、参与须知、意见反馈等</view>
+      </view>
+      <view class="ad" style="background-image: url('https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/ad.png?sign=94ac5d2d0fe1a190968ec761b34ab747&t=1608110609')">
+      </view>
+    </view>
+
+    <view class="mini-container">
+      <view class="data-title">
+        <common-title title="大会资料" />
+        <icon class="iconfont arrow-right" />
+      </view>
+      <view class="data-list">
+        <block wx:for="{{dataList}}" wx:key="id">
+          <data-item item="{{item}}" />
+        </block>
+      </view>
+    </view>
+
+    <view class="mini-container">
+      <common-title title="服务专区" />
+      <view class="serve">
+        <view class="serve-card">
+          <image class="serve-icon" mode="aspectFill" src="https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/%E5%B9%BF%E5%91%8A%E7%89%8C.png?sign=d495dc089671c8eee204c0d2c1bc6404&t=1608115475" />
+          广告投放指引
+        </view>
+        <view class="serve-card">
+          <image class="serve-icon" mode="aspectFill" src="https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/%E5%B9%BF%E5%91%8A%E7%89%8C.png?sign=d495dc089671c8eee204c0d2c1bc6404&t=1608115475" />
+          满意度调查
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

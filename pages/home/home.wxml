@@ -28,10 +28,7 @@
     </view>
 
     <view class="partner">
-      <view class="partner-header">
-        <image class="partner-icon" src="/public/images/icon_home_title.png" />
-        <view class="partner-title">合作伙伴</view>
-      </view>
+      <common-title title="合作伙伴" />
       <image class="partner-content" src="/public/images/pic_home_partner.png" />
     </view>
 

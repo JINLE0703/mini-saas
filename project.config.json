@@ -70,6 +70,12 @@
         {
           "name": "pages/news/news",
           "pathName": "pages/news/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/guide/guide",
+          "pathName": "pages/guide/guide",
           "scene": null
         }
       ]

@@ -77,26 +77,6 @@
   margin: 30rpx;
 }
 
-.partner-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.partner-icon {
-  width: 66rpx;
-  height: 66rpx;
-}
-
-.partner-title {
-  height: 56rpx;
-  font-size: 38rpx;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #262626;
-  line-height: 56rpx;
-}
-
 .partner-content {
   width: 690rpx;
   height: 536rpx;

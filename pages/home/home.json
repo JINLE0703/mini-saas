@@ -6,7 +6,8 @@
     "tabs": "/components/tabs",
     "schedule": "/components/schedule",
     "guest": "/components/swiper-guest",
-    "dynamic": "/components/dynamic"
+    "dynamic": "/components/dynamic",
+    "common-title": "/components/common-title"
   },
   "navigationStyle": "custom"
 }
