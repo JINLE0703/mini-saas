@@ -1,39 +1,42 @@
 <navigation-bar>
   <image class="navi-bar-img" mode="aspectFill" src="/public/images/icon_tabbar_logo.png" />
 </navigation-bar>
-<view class="container">
-  <image class="bg-top" src="/public/images/bg_home_top.png" />
-  <image class="bg-bottom" src="/public/images/bg_home_bottom.png" />
-  <view class="header">
-    <text class="header-title">易会·易馆·易中心</text>
-    <view class="header-info">
-      <text class="header-date">2020/8/20</text>
-      <text class="header-site">中国·深圳市</text>
+<scroll-view scroll-y style="height: calc(100vh - {{navBarHeight}}px)">
+  <view class="container">
+    <image class="bg-top" src="/public/images/bg_home_top.png" />
+    <image class="bg-bottom" src="/public/images/bg_home_bottom.png" />
+    <view class="header">
+      <text class="header-title">易会·易馆·易中心</text>
+      <view class="header-info">
+        <text class="header-date">2020/8/20</text>
+        <text class="header-site">中国·深圳市</text>
+      </view>
+      <count-down endTime="{{'2020/12/25'}}" />
     </view>
-    <count-down endTime="{{'2020/12/25'}}" />
-  </view>
 
-  <swiper-img list="{{imgInfo}}" />
-  
-  <tabs id="tabs" list="{{tabsInfo}}">
-    <schedule slot="{{tabsInfo[0].id}}" list="{{scheduleInfo}}" defaultCount="2" bind:tabsAutoHeight="tabsAutoHeight" />
-    <guest slot="{{tabsInfo[1].id}}" />
-    <dynamic slot="{{tabsInfo[2].id}}" />
-  </tabs>
+    <swiper-img list="{{imgInfo}}" />
 
-  <view class="ad">
-    <image class="ad-img" src="/public/images/ad.png" />
-  </view>
+    <tabs id="tabs" list="{{tabsInfo}}">
+      <schedule slot="{{tabsInfo[0].id}}" list="{{scheduleInfo}}" defaultCount="2"
+        bind:tabsAutoHeight="tabsAutoHeight" />
+      <guest slot="{{tabsInfo[1].id}}" />
+      <dynamic slot="{{tabsInfo[2].id}}" />
+    </tabs>
 
-  <view class="partner">
-    <view class="partner-header">
-      <image class="partner-icon" src="/public/images/icon_home_title.png" />
-      <view class="partner-title">合作伙伴</view>
+    <view class="ad">
+      <image class="ad-img" src="/public/images/ad.png" />
     </view>
-    <image class="partner-content" src="/public/images/pic_home_partner.png" />
-  </view>
 
-  <view class="share" bind:tap="handleTapShare">
-    分享 
+    <view class="partner">
+      <view class="partner-header">
+        <image class="partner-icon" src="/public/images/icon_home_title.png" />
+        <view class="partner-title">合作伙伴</view>
+      </view>
+      <image class="partner-content" src="/public/images/pic_home_partner.png" />
+    </view>
+
+    <view class="share" bind:tap="handleTapShare">
+      分享
+    </view>
   </view>
-</view>
+</scroll-view>

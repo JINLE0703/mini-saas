@@ -1,1 +1,52 @@
-/* components/news-card/index.wxss */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 230rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EAEBEC;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  width: 434rpx;
+  height: 100rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #262626;
+  line-height: 50rpx;
+}
+
+.sub-info {
+  display: flex;
+  flex-direction: row;
+  height: 42rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 42rpx;
+}
+
+.tag {
+  margin-right: 8rpx;
+  color: #195AFF;
+}
+
+.date {
+  color: #999999;
+}
+
+.poster {
+  width: 226rpx;
+  height: 170rpx;
+  border-radius: 8rpx;
+}

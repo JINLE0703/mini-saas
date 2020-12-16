@@ -1,6 +1,24 @@
 // app.js
 App({
-  onLaunch (options) {
+  globalData: {
+    statusHeight: 0,
+    navHeight: 0,
+    navBarHeight: 0
+  },
+
+  async initNavBar() {
+    // 获取状态栏高度
+    const { statusBarHeight } = await wx.getSystemInfo()
+    // 获取胶囊信息
+    const { top, height } = wx.getMenuButtonBoundingClientRect()
+    const navHeight = (top - statusBarHeight) * 2 + height
+    // 获取导航栏高度
+    this.globalData.statusHeight = statusBarHeight
+    this.globalData.navHeight = navHeight
+    this.globalData.navBarHeight = navHeight + statusBarHeight
+  },
+
+  onLaunch(options) {
     // 加载字体
     wx.loadFontFace({
       global: true,
@@ -12,14 +30,15 @@ App({
       family: 'iconfont',
       source: 'https://at.alicdn.com/t/font_2270683_wwbl563nu39.woff2',
     })
+    this.initNavBar()
   },
-  onShow (options) {
+  onShow(options) {
     // Do something when show.
   },
-  onHide () {
+  onHide() {
     // Do something when hide.
   },
-  onError (msg) {
+  onError(msg) {
     console.log(msg)
   }
 })

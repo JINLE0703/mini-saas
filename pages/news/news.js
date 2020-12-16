@@ -1,10 +1,12 @@
 // pages/news/news.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    navBarHeight: 0,
     // 标签栏数据
     tabsInfo: [
       {
@@ -42,13 +44,60 @@ Page({
         content: '如何在不确定的时代找到正确的方向'
       }
     ],
+    // 全部页数据
+    allInfo: [
+      {
+        id: 0,
+        title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
+        tag: '大会动态',
+        date: '2018-8-23',
+        image: '/public/images/dynamic_1.jpg'
+      },
+      {
+        id: 1,
+        title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
+        tag: '大会动态',
+        date: '2018-8-23',
+        image: '/public/images/dynamic_1.jpg'
+      },
+      {
+        id: 2,
+        title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
+        tag: '大会动态',
+        date: '2018-8-23',
+        image: '/public/images/dynamic_1.jpg'
+      },
+      {
+        id: 0,
+        title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
+        tag: '大会动态',
+        date: '2018-8-23',
+        image: '/public/images/dynamic_1.jpg'
+      },
+      {
+        id: 1,
+        title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
+        tag: '大会动态',
+        date: '2018-8-23',
+        image: '/public/images/dynamic_1.jpg'
+      },
+      {
+        id: 2,
+        title: '俄媒谈G20：“中国智慧”为世界经济增长点燃希望',
+        tag: '大会动态',
+        date: '2018-8-23',
+        image: '/public/images/dynamic_1.jpg'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      navBarHeight: app.globalData.navBarHeight
+    })
   },
 
   /**
@@ -62,7 +111,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -83,14 +132,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**

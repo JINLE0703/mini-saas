@@ -1,3 +1,5 @@
 .conten-container {
   margin-top: 24rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
 }

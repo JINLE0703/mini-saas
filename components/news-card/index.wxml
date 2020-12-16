@@ -1,2 +1,10 @@
-<!--components/news-card/index.wxml-->
-<text>components/news-card/index.wxml</text>
+<view class="container">
+  <view class="info">
+    <view class="title">{{item.title}}</view>
+    <view class="sub-info">
+      <view class="tag">{{item.tag}}</view>
+      <view class="date">{{item.date}}</view>
+    </view>
+  </view>
+  <image class="poster" mode="aspectFill" src="{{item.image}}" />
+</view>

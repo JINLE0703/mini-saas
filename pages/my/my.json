@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "demo": "/components/swiper-guest"
+    "demo": "/components/news-card"
   }
 }

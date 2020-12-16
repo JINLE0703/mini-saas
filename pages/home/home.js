@@ -1,10 +1,12 @@
 // pages/home/home.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    navBarHeight: 0,
     // 滚动图片数据
     imgInfo: [
       {
@@ -111,7 +113,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      navBarHeight: app.globalData.navBarHeight
+    })
   },
 
   /**

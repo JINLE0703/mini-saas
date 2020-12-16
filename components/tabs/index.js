@@ -26,6 +26,7 @@ Component({
       this.autoHeight()
     }
   },
+
   /**
    * 组件的方法列表
    */
