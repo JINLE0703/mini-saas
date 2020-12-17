@@ -1,71 +1,28 @@
 // pages/my/my.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    scheduleInfo: [
-      {
-        id: 0,
-        title: '2020年数字峰会官方会议报道',
-        site: '数字峰会主会场',
-        date: '12月24日',
-        time: '08:00 - 09:30',
-        couldReserve: true,
-        guest: {
-          name: '刘克鸿',
-          status: '腾讯云会展总裁',
-          avatar: '/public/images/Oval.png'
-        }
-      },
-      {
-        id: 1,
-        title: '2020年数字峰会官方会议报道',
-        site: '数字峰会主会场',
-        date: '12月24日',
-        time: '08:00 - 09:30',
-        couldReserve: true,
-        guest: {
-          name: '刘克鸿',
-          status: '腾讯云会展总裁',
-          avatar: '/public/images/Oval.png'
-        },
-      },
-      {
-        id: 2,
-        title: '2020年数字峰会官方会议报道',
-        site: '数字峰会主会场',
-        date: '12月24日',
-        time: '08:00 - 09:30',
-        couldReserve: true,
-        guest: {
-          name: '刘克鸿',
-          status: '腾讯云会展总裁',
-          avatar: '/public/images/Oval.png'
-        },
-      },
-      {
-        id: 3,
-        title: '2020年数字峰会官方会议报道',
-        site: '数字峰会主会场',
-        date: '12月24日',
-        time: '08:00 - 09:30',
-        couldReserve: true,
-        guest: {
-          name: '刘克鸿',
-          status: '腾讯云会展总裁',
-          avatar: '/public/images/Oval.png'
-        },
-      }
-    ]
+    navBarHeight: 'auto',
+    isLogin: app.globalData.isLogin
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 监听全局 isLogin 属性
+    app.$watch('isLogin', (value) => {
+      this.setData({
+        isLogin: value
+      })
+    })
+    this.setData({
+      navBarHeight: app.globalData.navBarHeight
+    })
   },
 
   /**

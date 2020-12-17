@@ -23,7 +23,7 @@
     <view class="dots">
       <block wx:for="{{list}}" wx:key="index">
         <view class="dot-item {{currentIndex === index ? 'dot-active' : ''}}" data-index="{{index}}" bind:tap="handleTapDot">
-          <image mode="aspectFill" src="{{item.cover_img}}" />
+          <image class="dot-item-img" mode="aspectFill" src="{{item.cover_img}}" />
         </view>
       </block>
     </view>

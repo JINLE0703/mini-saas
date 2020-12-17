@@ -135,7 +135,7 @@
   box-sizing: border-box;
 }
 
-.dot-item image {
+.dot-item-img {
   width: 100%;
   height: 100%;
 }

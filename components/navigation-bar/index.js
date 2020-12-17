@@ -1,11 +1,14 @@
 // components/navigation-bar/index.js
-const app = getApp()
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    // 对齐方式
+    align: {
+      type: String,
+      value: 'center'
+    }
   },
 
   /**
@@ -18,22 +21,16 @@ Component({
   },
 
   lifetimes: {
-    attached() {
-      // // 获取状态栏高度
-      // const { statusBarHeight } = await wx.getSystemInfo()
-      // // 获取胶囊信息
-      // const { top, height } = wx.getMenuButtonBoundingClientRect()
-      // const navigationBarHeight = (top - statusBarHeight) * 2 + height
-      // app.globalData.navHeight = statusBarHeight + navigationBarHeight
-      // this.setData({
-      //   statusHeight: statusBarHeight,
-      //   navHeight: navigationBarHeight,
-      //   navBarHeight: statusBarHeight + navigationBarHeight
-      // })
+    async attached() {
+      // 获取状态栏高度
+      const { statusBarHeight } = await wx.getSystemInfo()
+      // 获取胶囊信息
+      const { top, height } = await wx.getMenuButtonBoundingClientRect()
+      const navHeight = (top - statusBarHeight) * 2 + height
       this.setData({
-        statusHeight: app.globalData.statusHeight,  // 状态栏高度
-        navHeight: app.globalData.navHeight,  // 导航栏高度
-        navBarHeight: app.globalData.navBarHeight
+        statusHeight: statusBarHeight,  // 状态栏高度
+        navHeight: navHeight,  // 导航栏高度
+        navBarHeight: statusBarHeight + navHeight
       })
     }
   },

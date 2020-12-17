@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="logo">
+    <image class="logo-img" mode="aspectFill"
+      src="https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/icon_login_logo.png?sign=9f7bc1a27224d709343cf06971bee19b&t=1608185975" />
+    <view class="logo-welcome">欢迎登录</view>
+  </view>
+  <view class="login">
+    <view class="input-container">
+      <input class="input-phone" type="number" placeholder="请输入手机号" placeholder-class="input-placeholder" />
+    </view>
+    <view class="input-container code">
+      <input class="input-code" type="number" placeholder="请输入验证码" placeholder-class="input-placeholder" />
+      <view class="btn-code">获取验证码</view>
+    </view>
+    <button class="btn btn-login">登录</button>
+    <button class="btn btn-wx" bindgetuserinfo="handleTapWX" open-type="getUserInfo">微信一键登录</button>
+  </view>
+</view>

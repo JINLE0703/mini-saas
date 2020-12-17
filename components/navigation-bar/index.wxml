@@ -1,6 +1,6 @@
 <view class="container" style="height: {{navBarHeight}}px">
   <view style="height: {{statusHeight}}px"></view>
-  <view class="navi-bar" style="height: {{navHeight}}px">
+  <view class="navi-bar" style="height: {{navHeight}}px; justify-content: {{align}};">
     <slot></slot>
   </view>
 </view>

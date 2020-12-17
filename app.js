@@ -1,21 +1,49 @@
 // app.js
 App({
   globalData: {
-    statusHeight: 'auto',
-    navHeight: 'auto',
-    navBarHeight: 'auto'
+    statusHeight: 'auto', // 状态栏高度
+    navHeight: 'auto', // 导航栏高度
+    navBarHeight: 'auto', // 导航栏整体高度
+    isLogin: false
+  },
+  
+  // 监听属性
+  $watch(key, cb) {
+    const obj = this.globalData
+    let val = obj[key]
+    Object.defineProperty(obj, key, {
+      configurable: true,
+      enumerable: true,
+      get: () => {
+        return val
+      },
+      set: (value) => {
+        val = value
+        cb(value)
+      }
+    })
   },
 
+  // 初始化导航栏高度
   async initNavBar() {
     // 获取状态栏高度
     const { statusBarHeight } = await wx.getSystemInfo()
     // 获取胶囊信息
     const { top, height } = await wx.getMenuButtonBoundingClientRect()
     const navHeight = (top - statusBarHeight) * 2 + height
-    // 获取导航栏高度
+
     this.globalData.statusHeight = statusBarHeight
     this.globalData.navHeight = navHeight
     this.globalData.navBarHeight = navHeight + statusBarHeight
+  },
+
+  // 判断登录状态
+  checkLogin() {
+    if (wx.getStorageSync('user_info')) {
+      this.globalData.isLogin = true
+    } else {
+      this.globalData.isLogin = false
+    }
   },
 
   onLaunch(options) {
@@ -30,7 +58,10 @@ App({
       family: 'iconfont',
       source: 'https://at.alicdn.com/t/font_2270683_wwbl563nu39.woff2',
     })
+    // 初始化导航栏高度
     this.initNavBar()
+    // 判断登录状态
+    this.checkLogin()
   },
   onShow(options) {
     // Do something when show.

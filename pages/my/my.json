@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "demo": "/components/news-card"
-  }
+    "navigation-bar": "/components/navigation-bar",
+    "login": "/components/login",
+    "my-detail": "/components/my-detail"
+  },
+  "navigationStyle": "custom"
 }

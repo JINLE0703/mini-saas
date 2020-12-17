@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="user">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" />
+    <view class="name">
+      <view class="name-content">{{userInfo.nickName}}</view>
+      <icon class="iconfont arrow-right" />
+    </view>
+  </view>
+
+  <view class="reserve">
+    <view class="title">
+      <view class="title-left">
+        <icon class="icon-title"
+          style="background-image: url('https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/icon-a-public-time.png?sign=ef4afff46e25d5069e7bdd964d3e3e76&t=1608200504')" />
+        <view class="title-content">我的预约</view>
+      </view>
+    </view>
+    <view class="reserve-info">
+      <view class="no-reserve">
+        <image class="no-reserve-img" mode="aspectFill"
+          src="https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/pic_me_not.png?sign=41799f561d031f49c13b9d59d8e89dcc&t=1608204758" />
+        <view class="no-reserve-content">暂无预约直播</view>
+        <view class="btn-reserve">立即预约</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="feedback">
+    <view class="title">
+      <view class="title-left">
+        <icon class="icon-title"
+          style="background-image: url('https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/icon-a-public-time.png?sign=ef4afff46e25d5069e7bdd964d3e3e76&t=1608200504')" />
+        <view class="title-content">意见与反馈</view>
+      </view>
+      <icon class="iconfont arrow-right" />
+    </view>
+  </view>
+</view>
