@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="motto">
+   <view>Welcome</view>
+   <view>JinleMiniPro</view>
+  </view>
+  <button class="btn" bind:tap="handleTapSaas">云展会入口</button>
+  <button class="btn" bind:tap="handleTapDemo">demo入口</button>
+</view>

@@ -1,6 +1,8 @@
 .container {
+  position: relative;
   padding-left: 30rpx;
   padding-right: 30rpx;
+  padding-bottom: 150rpx;
 }
 
 .user {

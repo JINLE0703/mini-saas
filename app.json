@@ -1,10 +1,12 @@
 {
-  "entryPagePath": "pages/home/home",
+  "entryPagePath": "pages/welcome/welcome",
   "pages": [
+    "pages/welcome/welcome",
     "pages/home/home",
     "pages/news/news",
     "pages/guide/guide",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/demo/demo"
   ],
   "tabBar": {
     "list": [

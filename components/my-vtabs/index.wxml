@@ -1,0 +1,23 @@
+<view class="jinle_tabs">
+  <view class="jinle_tabs_bar_container {{tabBarClass}}">
+    <scroll-view scroll-y class="jinle_tabs_bar_scrollview">
+      <view class="jinle_tabs_bar">
+        <block wx:for="{{tabs}}" wx:key="title">
+          <view class="jinle_tabs_bar_item" bind:tap="handleTapTab" data-index="{{index}}"
+            style="background-color: {{activeTab === index ? activeTabBgColor : inactiveTabBgColor}}; color: {{activeTab === index ? activeTabTextColor : inactiveTabTextColor}}; border-left-color: {{activeTab === index ? tabLineColor : 'transparent'}}">
+            <view class="jinle_tabs_bar_title {{activeTab === index ? activeClass : ''}}">
+              <text>{{item.title}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="jinle_tabs_content_container">
+    <scroll-view scroll-y class="jinle_tabs_content_scrollview" scroll-top="{{scrollTop}}">
+      <view class="jinle_tabs_content">
+        <slot></slot>
+      </view>
+    </scroll-view>
+  </view>
+</view>

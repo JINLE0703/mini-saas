@@ -1,0 +1,3 @@
+<view class="jinle_tabs_content_item">
+  <slot></slot>
+</view>

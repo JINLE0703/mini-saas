@@ -34,6 +34,9 @@
       </view>
       <icon class="iconfont arrow-right" />
     </view>
+    <view>
+      
+    </view>
   </view>
 
   <button class="btn btn-logout" bind:tap="handleTapLogout">退出登录</button>
