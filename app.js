@@ -18,6 +18,7 @@ App({
         return val
       },
       set: (value) => {
+        console.log('set')
         val = value
         cb(value)
       }

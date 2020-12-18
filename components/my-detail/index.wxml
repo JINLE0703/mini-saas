@@ -20,7 +20,7 @@
         <image class="no-reserve-img" mode="aspectFill"
           src="https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/pic_me_not.png?sign=41799f561d031f49c13b9d59d8e89dcc&t=1608204758" />
         <view class="no-reserve-content">暂无预约直播</view>
-        <view class="btn-reserve">立即预约</view>
+        <button class="btn btn-reserve">立即预约</button>
       </view>
     </view>
   </view>
@@ -35,4 +35,6 @@
       <icon class="iconfont arrow-right" />
     </view>
   </view>
+
+  <button class="btn btn-logout" bind:tap="handleTapLogout">退出登录</button>
 </view>

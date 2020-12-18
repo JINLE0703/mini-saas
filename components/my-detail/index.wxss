@@ -113,16 +113,29 @@
   line-height: 40rpx;
 }
 
-.btn-reserve {
-  width: 642rpx;
-  height: 88rpx;
-  margin-top: 48rpx;
+.btn {
+  width: 642rpx !important;
+  height: 88rpx !important;
+  padding: 0;
+  background: #fff;
   border-radius: 8rpx;
-  border: 1px solid #054CFF;
   font-size: 32rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
-  color: #054CFF;
   line-height: 88rpx;
-  text-align: center;
+}
+
+.btn-reserve {
+  margin-top: 48rpx;
+  border: 1px solid #054CFF;
+  color: #054CFF;
+}
+
+.btn-logout {
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #FA5175;
+  color: #FA5175;
 }

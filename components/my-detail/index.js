@@ -1,4 +1,5 @@
 // components/my-detail/index.js
+const app = getApp()
 Component({
   /**
    * 组件的属性列表
@@ -19,7 +20,6 @@ Component({
       this.setData({
         userInfo: wx.getStorageSync('user_info')
       })
-      console.log(this.data.userInfo)
     }
   },
 
@@ -27,6 +27,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleTapLogout() {
+      wx.removeStorage({
+        key: 'user_info',
+        success(res) {
+          app.globalData.isLogin = false
+        }
+      })
+    }
   }
 })
