@@ -65,7 +65,6 @@
   align-items: center;
   width: 690rpx;
   height: 96rpx;
-  border-bottom: 1px solid #EAEBEC;
 }
 
 .title-left {

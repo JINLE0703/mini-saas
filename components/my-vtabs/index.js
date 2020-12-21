@@ -17,12 +17,14 @@ Component({
     activeTabTextColor: { type: String, value: '#07C160' }, // tab激活文字颜色
     inactiveTabTextColor: { type: String, value: '#000000' }, // tab未激活文字颜色
     tabLineColor: { type: String, value: '#07C160' }, // tab侧边直线颜色
+    animation: { type: Boolean, value: true }, // 动画效果
   },
 
   /**
    * 组件的初始数据
    */
   data: {
+    activeTab: 0, // 当前激活的tab
     scrollTop: 0, // 被激活 content 相对滚动高度
     _contentHeight: [], // 每个 content 的高度集合
     _heightRecords: [], // 记录每个 content 的相对高度
@@ -51,7 +53,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    // 记录每个content的相对高度
+    // 记录每个 content 的相对高度
     recordHeight() {
       const len = this.properties.tabs.length
       const { _contentHeight } = this.data
@@ -65,7 +67,7 @@ Component({
         _heightRecords
       })
     },
-    // 处理点击tab标签
+    // 处理点击 tab 标签
     handleTapTab(e) {
       const { index } = e.currentTarget.dataset
       const { _heightRecords } = this.data
@@ -74,6 +76,28 @@ Component({
         activeTab: index,
         scrollTop
       })
+    },
+    // 处理内容滚动
+    handleScrollView(e) {
+      const { _heightRecords } = this.data
+      const len = this.properties.tabs.length
+      const { scrollTop } = e.detail
+      let index = 0
+
+      if (scrollTop >= _heightRecords[0]) {
+        for (let i = 1; i < len; i++) {
+          if (scrollTop >= _heightRecords[i - 1] && scrollTop < _heightRecords[i]) {
+            index = i
+            break
+          }
+        }
+      }
+
+      if (index !== this.data.activeTab) {
+        this.setData({
+          activeTab: index
+        })
+      }
     }
   }
 })

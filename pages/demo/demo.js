@@ -34,14 +34,19 @@ Page({
         id: 6,
         title: '测试标签6'
       },
-    ]
+    ],
+    _windowHeight: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.getSystemInfo().then((res) => {
+      this.setData({
+        _windowHeight: res.windowHeight
+      })
+    })
   },
 
   /**

@@ -8,7 +8,7 @@
   </view>
 
   <view class="reserve">
-    <view class="title">
+    <view class="title" style="border-bottom: 1px solid #EAEBEC;">
       <view class="title-left">
         <icon class="icon-title"
           style="background-image: url('https://6465-demo-1gkm3ya7d1739416-1304452149.tcb.qcloud.la/images/icon-a-public-time.png?sign=ef4afff46e25d5069e7bdd964d3e3e76&t=1608200504')" />
