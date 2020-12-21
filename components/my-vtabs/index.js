@@ -18,6 +18,8 @@ Component({
     inactiveTabTextColor: { type: String, value: '#000000' }, // tab未激活文字颜色
     tabLineColor: { type: String, value: '#07C160' }, // tab侧边直线颜色
     animation: { type: Boolean, value: true }, // 动画效果
+    showTitle: { type: Boolean, value: false }, // 是否显示标题
+    titleClass: { type: String, value: '' }, // 标题样式
   },
 
   /**
