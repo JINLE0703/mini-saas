@@ -1,10 +1,36 @@
 <view style="height: {{_windowHeight}}px">
-  <tabs tabs="{{tabs}}">
-    <view slot="tabs-content-0" style="height: 5000rpx; background-color: red"></view>
-    <view slot="tabs-content-1" style="height: 500rpx; background-color: green"></view>
-    <view slot="tabs-content-2" style="height: 500rpx; background-color: blue"></view>
-    <view slot="tabs-content-3" style="height: 500rpx; background-color: red"></view>
-    <view slot="tabs-content-4" style="height: 500rpx; background-color: green"></view>
-    <view slot="tabs-content-5" style="height: 500rpx; background-color: blue"></view>
+  <tabs row="{{type === 'row'}}" column="{{type === 'column'}}" tabs="{{tabs}}" show-title>
+    <block wx:if="{{type === 'row'}}">
+      <view slot="tabs-item-0" style="height: 5000rpx; background-color: red; overflow: hidden">
+        <button bind:tap="handleTap" style="margin-top: 20rpx; margin-bottom: 20rpx">切换</button>
+      </view>
+      <view slot="tabs-item-1" style="height: 500rpx; background-color: green"></view>
+      <view slot="tabs-item-2" style="height: 500rpx; background-color: blue"></view>
+      <view slot="tabs-item-3" style="height: 500rpx; background-color: red"></view>
+      <view slot="tabs-item-4" style="height: 500rpx; background-color: green"></view>
+      <view slot="tabs-item-5" style="height: 500rpx; background-color: blue"></view>
+    </block>
+    <block wx:else>
+      <tabs-item tab-index="0">
+        <view style="height: 500rpx; background-color: red; overflow: hidden">
+          <button bind:tap="handleTap" style="margin-top: 20rpx; margin-bottom: 20rpx">切换</button>
+        </view>
+      </tabs-item>
+      <tabs-item tab-index="1">
+        <view style="height: 500rpx; background-color: green"></view>
+      </tabs-item>
+      <tabs-item tab-index="2">
+        <view style="height: 500rpx; background-color: blue"></view>
+      </tabs-item>
+      <tabs-item tab-index="3">
+        <view style="height: 500rpx; background-color: red"></view>
+      </tabs-item>
+      <tabs-item tab-index="4">
+        <view style="height: 500rpx; background-color: green"></view>
+      </tabs-item>
+      <tabs-item tab-index="5">
+        <view style="height: 500rpx; background-color: blue"></view>
+      </tabs-item>
+    </block>
   </tabs>
 </view>

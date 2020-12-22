@@ -1,0 +1,4 @@
+<view class="jinle_tabs_content_item">
+  <view class="jinle_tabs_content_item_title {{titleClass}}" wx:if="{{showTitle}}">{{title}}</view>
+  <slot></slot>
+</view>

@@ -14,6 +14,7 @@
       </view>
     </scroll-view>
   </view>
+  
   <view class="jinle_vtabs_content_container">
     <scroll-view scroll-y class="jinle_vtabs_content_scrollview" scroll-top="{{scrollTop}}"
       bind:scroll="handleScrollView" scroll-with-animation="{{animation}}">

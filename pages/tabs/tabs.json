@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "tabs": "/components/my-tabs"
+    "tabs": "/components/my-tabs",
+    "tabs-item": "/components/my-tabs-item"
   }
 }

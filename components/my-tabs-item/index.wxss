@@ -1,0 +1,12 @@
+.jinle_tabs_content_item {
+  width: 100%;
+}
+.jinle_tabs_content_item .jinle_tabs_content_item_title {
+  position: sticky;
+  top: 0;
+  height: 100rpx;
+  width: 100%;
+  background-color: #eee;
+  line-height: 100rpx;
+  text-align: center;
+}

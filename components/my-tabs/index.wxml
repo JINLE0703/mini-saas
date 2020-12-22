@@ -1,11 +1,17 @@
-<view class="jinle_tabs">
-  <view class="jinle_tabs_bar_container {{tabBarClass}}">
-    <scroll-view scroll-x class="jinle_tabs_bar_scrollview" scroll-into-view="jinle_tabs_bar_item_{{currentView}}">
-      <view class="jinle_tabs_bar">
+<view wx:if="{{row && !column || column && !row}}" class="{{row ? 'jinle_tabs' : 'jinle_vtabs'}}">
+
+  <!-- 头部 start -->
+  <view class=" {{row ? 'jinle_tabs_bar_container' : 'jinle_vtabs_bar_container'}} {{tabBarClass}}">
+    <scroll-view scroll-x="{{row}}" scroll-y="{{column}}"
+      class="{{row ? 'jinle_tabs_bar_scrollview' : 'jinle_vtabs_bar_scrollview'}}"
+      scroll-into-view="jinle_tabs_bar_item_{{currentView}}">
+      <view class="{{row ? 'jinle_tabs_bar' : 'jinle_vtabs_bar'}}">
         <block wx:for="{{tabs}}" wx:key="title">
-          <view id="jinle_tabs_bar_item_{{index}}" class="jinle_tabs_bar_item" bind:tap="handleTapTab" data-index="{{index}}"
-            style="background-color: {{activeTab === index ? activeTabBgColor : inactiveTabBgColor}}; color: {{activeTab === index ? activeTabTextColor : inactiveTabTextColor}}; border-bottom-color: {{activeTab === index ? tabLineColor : 'transparent'}}">
-            <view class="jinle_tabs_bar_title {{activeTab === index ? activeClass : ''}}">
+          <view id="jinle_tabs_bar_item_{{index}}" class="{{row ? 'jinle_tabs_bar_item' : 'jinle_vtabs_bar_item'}}"
+            bind:tap="handleTapTab" data-index="{{index}}"
+            style="background-color: {{activeTab === index ? activeTabBgColor : inactiveTabBgColor}}; color: {{activeTab === index ? activeTabTextColor : inactiveTabTextColor}}; border-{{row ? 'bottom': 'left'}}-color: {{activeTab === index ? tabLineColor : 'transparent'}}">
+            <view
+              class="{{row ? 'jinle_tabs_bar_title' : 'jinle_vtabs_bar_title'}} {{activeTab === index ? activeClass : ''}}">
               <text>{{item.title}}</text>
             </view>
           </view>
@@ -13,18 +19,37 @@
       </view>
     </scroll-view>
   </view>
+  <!-- 头部 end -->
 
-  <view class="jinle_tabs_content_container">
-    <swiper class="jinle_tabs_content_swiper" current="{{activeTab}}" bind:change="handleScrollView">
-      <view class="jinle_tabs_content">
-        <block wx:for="{{tabs}}" wx:key="title">
-          <swiper-item>
-            <scroll-view scroll-y class="jinle_tabs_content_scrollview">
-              <slot name="tabs-content-{{index}}"></slot>
-            </scroll-view>
-          </swiper-item>
-        </block>
-      </view>
-    </swiper>
-  </view>
+  <!-- row 内容 start -->
+  <block wx:if="{{row}}">
+    <view class="jinle_tabs_content_container">
+      <swiper class="jinle_tabs_content_swiper" current="{{activeTab}}" bind:change="handleScrollView">
+        <view class="jinle_tabs_content">
+          <block wx:for="{{tabs}}" wx:key="title">
+            <swiper-item>
+              <scroll-view scroll-y class="jinle_tabs_content_scrollview">
+                <slot name="tabs-item-{{index}}"></slot>
+              </scroll-view>
+            </swiper-item>
+          </block>
+        </view>
+      </swiper>
+    </view>
+  </block>
+  <!-- row 内容 end -->
+
+  <!-- column 内容 start -->
+  <block wx:if="{{column}}">
+    <view class="jinle_vtabs_content_container">
+      <scroll-view scroll-y class="jinle_vtabs_content_scrollview" scroll-top="{{scrollTop}}"
+        bind:scroll="handleScrollView" scroll-with-animation="{{animation}}">
+        <view class="jinle_vtabs_content">
+          <slot></slot>
+        </view>
+      </scroll-view>
+    </view>
+  </block>
+  <!-- column 内容 end -->
+
 </view>

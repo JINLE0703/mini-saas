@@ -6,7 +6,13 @@ Page({
    */
   data: {
     tabs: [],
-    _windowHeight: 0
+    _windowHeight: 0,
+    type: 'column'
+  },
+
+  handleTap() {
+    if (this.data.type === 'row') this.setData({ type: 'column' })
+    else if (this.data.type === 'column') this.setData({ type: 'row' })
   },
 
   /**
