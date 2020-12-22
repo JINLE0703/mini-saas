@@ -4,5 +4,6 @@
    <view>JinleMiniPro</view>
   </view>
   <button class="btn" bind:tap="handleTapSaas">云展会入口</button>
-  <button class="btn" bind:tap="handleTapDemo">demo入口</button>
+  <button class="btn" bind:tap="handleTapVtabs">vtabs入口</button>
+  <button class="btn" bind:tap="handleTapTabs">tabs入口</button>
 </view>

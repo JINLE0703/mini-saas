@@ -6,7 +6,8 @@
     "pages/news/news",
     "pages/guide/guide",
     "pages/my/my",
-    "pages/demo/demo"
+    "pages/vtabs/vtabs",
+    "pages/tabs/tabs"
   ],
   "tabBar": {
     "list": [

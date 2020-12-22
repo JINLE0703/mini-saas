@@ -24,7 +24,7 @@ Component({
     '../my-vtabs/index': {
       type: 'parent',
       linked: function (target) {
-        const { title } = target.properties.tabs[this.properties.tabIndex]
+        const { title } = target.properties.vtabs[this.properties.tabIndex]
         const { showTitle, titleClass } = target.properties
         this.setData({
           title,

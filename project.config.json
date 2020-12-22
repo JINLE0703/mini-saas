@@ -80,8 +80,9 @@
           "scene": null
         },
         {
-          "name": "pages/demo/demo",
-          "pathName": "pages/demo/demo",
+          "name": "pages/tabs/tabs",
+          "pathName": "pages/tabs/tabs",
+          "query": "",
           "scene": null
         }
       ]

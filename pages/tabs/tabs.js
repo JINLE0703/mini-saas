@@ -1,29 +1,13 @@
-// pages/welcome/welcome.js
+// pages/tabs/tabs.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  handleTapSaas() {
-    wx.switchTab({
-      url: '/pages/home/home'
-    })
-  },
-
-  handleTapVtabs() {
-    wx.redirectTo({
-      url: '/pages/vtabs/vtabs'
-    })
-  },
-
-  handleTapTabs() {
-    wx.redirectTo({
-      url: '/pages/tabs/tabs'
-    })
+    tabs: {
+      title: '测试标签'
+    }
   },
 
   /**

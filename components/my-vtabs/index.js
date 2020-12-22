@@ -8,7 +8,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    tabs: { type: Array, value: [] }, // 标签栏数据 { title }
+    vtabs: { type: Array, value: [] }, // 标签栏数据 { title }
     activeTab: { type: Number, value: 0 }, // 当前激活的tab
     tabBarClass: { type: String, value: '' }, // 导航栏样式
     activeClass: { type: String, value: '' }, // 激活tab样式
@@ -33,7 +33,7 @@ Component({
   },
 
   relations: {
-    '../my-tabs-item/index': {
+    '../my-vtabs-item/index': {
       type: 'child', // 关联的目标节点应为子节点
       linked: function (target) { // 每次被插入时执行，target是该节点实例对象，触发在该节点attached生命周期之后
         // 计算每个 content 的高度存进 _contentHeight
@@ -57,7 +57,7 @@ Component({
   methods: {
     // 记录每个 content 的相对高度
     recordHeight() {
-      const len = this.properties.tabs.length
+      const len = this.properties.vtabs.length
       const { _contentHeight } = this.data
       const _heightRecords = []
       let temp = 0
@@ -78,11 +78,12 @@ Component({
         activeTab: index,
         scrollTop
       })
+      this.triggerEvent('tabclick', { index })
     },
     // 处理内容滚动
     handleScrollView(e) {
       const { _heightRecords } = this.data
-      const len = this.properties.tabs.length
+      const len = this.properties.vtabs.length
       const { scrollTop } = e.detail
       let index = 0
 
@@ -99,6 +100,7 @@ Component({
         this.setData({
           activeTab: index
         })
+        this.triggerEvent('change', { index })
       }
     }
   }
