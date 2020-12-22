@@ -1,3 +1,10 @@
-<view>
-  <tabs></tabs>
+<view style="height: {{_windowHeight}}px">
+  <tabs tabs="{{tabs}}">
+    <view slot="tabs-content-0" style="height: 5000rpx; background-color: red"></view>
+    <view slot="tabs-content-1" style="height: 500rpx; background-color: green"></view>
+    <view slot="tabs-content-2" style="height: 500rpx; background-color: blue"></view>
+    <view slot="tabs-content-3" style="height: 500rpx; background-color: red"></view>
+    <view slot="tabs-content-4" style="height: 500rpx; background-color: green"></view>
+    <view slot="tabs-content-5" style="height: 500rpx; background-color: blue"></view>
+  </tabs>
 </view>

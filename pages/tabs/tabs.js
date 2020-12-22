@@ -5,16 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabs: {
-      title: '测试标签'
-    }
+    tabs: [],
+    _windowHeight: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let tabs = []
+    let title = '测试标签'
+    for (let i = 0; i < 6; i++) {
+      tabs.push({
+        title: title + i
+      })
+    }
+    this.setData({
+      tabs
+    })
+    wx.getSystemInfo().then((res) => {
+      this.setData({
+        _windowHeight: res.windowHeight
+      })
+    })
   },
 
   /**

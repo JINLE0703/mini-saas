@@ -84,6 +84,12 @@
           "pathName": "pages/tabs/tabs",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/vtabs/vtabs",
+          "pathName": "pages/vtabs/vtabs",
+          "query": "",
+          "scene": null
         }
       ]
     }
