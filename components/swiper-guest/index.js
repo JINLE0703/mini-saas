@@ -102,8 +102,8 @@ Component({
       const rightSwiper = current + 1 === listLength ? 0 : current + 1
       this.setData({
         [`list[${current}].offset`]: 0,
-        [`list[${leftSwiper}].offset`]: 600,
-        [`list[${rightSwiper}].offset`]: -600
+        [`list[${leftSwiper}].offset`]: 400,
+        [`list[${rightSwiper}].offset`]: -400
       })
     }
   }

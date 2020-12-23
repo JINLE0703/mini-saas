@@ -2,7 +2,7 @@
   <swiper class="swiper" bind:change="handleSwiperChange" current="{{currentIndex}}" circular previous-margin="143rpx" next-margin="143rpx">
     <block wx:for="{{list}}" wx:key="index">
       <swiper-item class="swiper-item {{currentIndex === index ? 'active' : ''}}">
-        <view class="item-container {{currentIndex === index ? '' : 'quiet'}}">
+        <view class="item-container {{currentIndex === index ? '' : 'quiet'}}" style="margin-left: {{item.offset}}rpx">
           <image mode="aspectFill" class="guest-img" src="{{item.cover_img}}" />
           <view class="guest-info">
             <image class="guest-bg" src="/public/images/bg_people_bottom.png" />

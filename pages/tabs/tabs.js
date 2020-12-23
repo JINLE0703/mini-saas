@@ -7,7 +7,7 @@ Page({
   data: {
     tabs: [],
     _windowHeight: 0,
-    type: 'column'
+    type: 'row'
   },
 
   handleTap() {

@@ -30,6 +30,7 @@
   flex-direction: column;
   width: 404rpx;
   height: 100%;
+  transition: all .5s;
 }
 
 .guest-img {
